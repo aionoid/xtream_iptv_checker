@@ -28,7 +28,9 @@ async def getXtreamInfo(
                                 int(data[key]["exp_date"])
                             )
                             exp_string = exp_date.strftime("%d/%m/%Y")
-                            return f"::{exp_string}::=>::{username}::{password}\n"
+                            return (
+                                f"::{exp_string}::=>::{site}::{username}::{password}\n"
+                            )
 
             except (json.JSONDecodeError, ValueError) as e:
                 print(f"JSON Error for {url}: {str(e)}")
