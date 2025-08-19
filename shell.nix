@@ -20,7 +20,7 @@ with import <nixpkgs> {
     GREETING = "CHECK Xtream code";
     shellHook = ''
       figlet -t -f banner3-D $GREETING | lolcat
-      echo "run command 'python main.py'"
+      echo "run command 'python async_main.py'"
       python async_main.py
     '';
   }
